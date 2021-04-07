@@ -1,7 +1,99 @@
-h1 {
-    color:blue;
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
 }
 
-.container:hover{
-    opacity: 3;
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:blueviolet;
+    font-size: medium;
+    height: 100vh;
+}
+
+.top_nav{
+    border-bottom: 5px solid pink;
+ 
+}
+
+.nav_check{
+    display:none;
+}
+
+
+.menu_bar, .exit{
+    width: 1.5rem;
+    margin:10px 20px 30px 20px;
+
+}
+.exit{
+    display:none;
+}
+
+
+.toggle{
+    position: absolute;
+    cursor:pointer;
+    margin: 0;
+    right: 0;
+    
+}
+
+
+
+.menu_nav{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 20px;
+    gap: 1rem;
+    
+  
+   
+
+}
+
+
+.menu_nav li{
+    list-style: none;
+   display: none;
+    
+}
+
+.menu_nav li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+}
+
+#nav_check:checked~ul.menu_nav li{
+    display: block;
+}
+
+#nav_check:checked~label.toggle .exit{
+    display: block;
+}
+#nav_check:checked~label.toggle .menu_bar{
+    display: none;
+}
+
+
+@media only screen and (min-width: 560px){
+
+    .top_nav .toggle{
+        display:none;
+    }
+
+    .menu_nav{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+   
+    .menu_nav li{
+        display: block;
+    }
+
 }

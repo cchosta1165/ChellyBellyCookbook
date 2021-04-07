@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chelly Belly Cookbook</title>
+    <title>ChellyBellyCookBook</title>
     <link href = "style.css" type = "text/css" rel = "stylesheet" />
 </head>
 <body>
 
-    <div id = "header">
-    <h1 id = "top">Chelly Belly Cookbook</h1>
+    <nav class="top_nav">
+        <input type = "checkbox" id = "nav_check" class = "nav_check">
+        <label for = "nav_check" class = "toggle">
+
+            <img src = "images/barmenu.png" alt = "bar menu icon for nav menu pop up" class = "menu_bar">
+            <img src = "images/xicon.png" alt = "exit icon to exit out of nav menu pop up" class = "exit">
+
+        </label>
+
+        <ul class="menu_nav">
+            <li class = "item1"><a href="index1.html">Home</a></li>
+            <li class = "item2"><a href="recipes.html" target = "_blank">Recipes</a></li>
+            <li class = "item3"><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
     
-    <ul>
-    <li> <a href = "index.html">Home</a></li>
-    <li><a href = "recipes.html" target = "_blank">Recipes</a></li>
-    </ul>
-    </div> 
-
-    <h2>This is a subheading</h2>
-
-    <div class = "container">
-        <a href = "recipes.html" target = "_blank">
-   <img src = "images/beefstew_crockpot.jpeg" alt = "Beef Stew in Crockpot"
-    title = "Beef Stew" >
-</a>
 
 
-    <img src = "images/chickentaco.jpeg" alt = "Baked Chicken Tacos"
-    title = "Chicken Tacos" >
 
-</div>
     
-   <a href = "#top">Back Top of Page</a> 
 </body>
 </html>
