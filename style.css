@@ -1,3 +1,5 @@
+/*Mobile First*/
+
 html{
     box-sizing: border-box;
     margin: 0;
@@ -139,13 +141,19 @@ footer .img.align-left{
 
 
 
-.collection .item{
+.collection img{
     display: inline;
     width: 200px;
     height: 200px;
     margin: 10px;
     border-radius: 50%;
     
+}
+
+.collection:hover img{
+    transform: scale( 1.3) rotate(360deg);
+    cursor: pointer;
+    padding: 20px;
 }
 
 .social{
@@ -231,6 +239,85 @@ h2{
      margin-bottom: 5px;
  }
 
+ legend{
+     text-align:center;
+     font-size:2rem;
+     margin-bottom: 20px;
+ }
+ input[type = "text"]{
+     width: 200px;
+     border: 2px solid lightgray;
+     padding: 5px;
+     
+ }
+ input[type = "text"]:focus, input[type = "text"]:hover{
+    border: 2px solid black;
+    background-color: lightgray;
+    color: black;
+ }
+
+
+ input[type = "email"]{
+    width: 200px;
+    border: 2px solid lightgray;
+    padding: 5px;
+    
+}
+input[type = "email"]:focus, input[type = "email"]:hover{
+    border: 2px solid black;
+     background-color: lightgray;
+     color: black;
+}
+
+.comment{
+    margin-bottom: 50px;
+}
+
+fieldset{
+    margin-top:30px;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #d6d6d6;
+    line-height: 1.5rem;
+}
+textarea{
+    border: 2px solid lightgray;
+     padding: 5px;
+}
+
+ input{
+     margin: 20px;
+ }
+
+ select{
+    border: 2px solid lightgray;
+    padding: 5px;
+    color: darkslateblue;
+    
+ }
+ 
+
+ button{
+     border: 2px solid darkseagreen;
+     background-color: darkturquoise;
+     color: white;
+     border-radius: 5px;
+     padding: 5px;
+     margin-top: 10px;
+     font-size: 30px;
+    
+ }
+
+ button:hover{
+     border: 2px solid black;
+     background-color: lightgray;
+     color: black;
+     cursor: pointer;
+ }
+
+ .submit{
+     text-align: center;
+ }
  
 
 
@@ -298,7 +385,7 @@ h2{
         margin-bottom: 50px;
     }
    
-
+    
 }
 /*Desktop View*/
 
@@ -366,6 +453,12 @@ h2{
    .name{
        text-align: center;
    }
+
+   .collection:hover img{
+    transform: scale(1.7) rotate(360deg);
+    cursor: pointer;
+    padding: 30px;
+}
   
   
 }

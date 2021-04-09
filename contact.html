@@ -3,19 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
+    <link href = "style.css" type = "text/css" rel = "stylesheet" />
 </head>
 <body>
+
+    <nav class="top_nav">
+
+        <input type = "checkbox" id = "nav_check" class = "nav_check">
+        <label for = "nav_check" class = "toggle">
+
+            <img src = "images/barmenu.png" alt = "bar menu icon for nav menu pop up" class = "menu_bar">
+            <img src = "images/xicon.png" alt = "exit icon to exit out of nav menu pop up" class = "exit">
+
+        </label>
+
+        <ul class="menu_nav">
+
+            <div class = "logo">
+               <a href = "#">ChellyBelly Cookbook</a>
+            </div>
+            
+            <li class = "item_nav"><a href="index.html">Home</a></li>
+            <li class = "item_nav"><a href="recipes.html" target = "_blank">Recipes</a></li>
+            <li class = "item_nav"><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <div class = "banner">
+
+        <img class = "cooking_img" src = "images/banner final.jpg" alt = "clipart of cooking tools">
+
+    </div>
+
+    <script src = "script.js"></script>
     
     <fieldset>
         <legend>Contact Us</legend>
 
-            <label>Name:<br />
-            <input type = "text" name = "fullname" /></label><br />
+            <p>
+            <label for = "fullname">Name:<br />
+            <input type = "text" name = "fullname" id = "fullname"/></label><br />
+        </p>
 
-            <label>Email:<br />
-            <input type = "email" name = "email" /></label><br />
+        <p>
+            <label for = "email">Email:<br />
+            <input type = "email" name = "email" id = "email"/></label><br />
 
+        </p>
+
+        <div class = "break"></div>
+
+        <p>
             <label for = "source">
                 How did you hear about this website?
             </label>
@@ -29,9 +69,11 @@
 
             </select>
 
+        </p>
+
             <p>
-                <label for = "comment">Comments:</label><br />
-                <textarea rows = "6" cols = "50" id = "comment">Please leave any feedback or reviews on recipes...
+                <label class = "comment" for = "comment">Comments:</label><br />
+                <textarea onfocus="clearContents(this);" rows = "6" cols = "50" id = "comment">Please leave any feedback or reviews on recipes...
                 </textarea>
 
             </p>
@@ -49,9 +91,38 @@
                 </label>
             
             </p>
+            <div class = "submit">
+            <button type="button" onclick="myPrompt()">Submit</button>
+        </div>
+
+        <p id="message"></p>
 
        
     </fieldset>
+
+
+
+
+    <footer>
+
+        <div class = "social">
+           
+        
+        <a href = "https://www.facebook.com/chelsea.chosta/" target = "_blank">    
+        <img class = "facebook" src = "images/Facebook.png" alt = "facebook logo">
+        </a>
+    
+        <a href = "https://www.instagram.com/chels_1165/" target = "_blank">
+        <img class = "instagram" src = "images/Instagram.png" alt = "instagram logo">
+        </a>
+    
+        <a href = "https://www.pinterest.com/cchosta/_saved/" target = "_blank">
+        <img class = "pintrest" src = "images/Pintrest.png" alt = "pintrest logo">
+        </a>
+        
+        </div>  
+    
+    </footer>
 
 
 </body>
