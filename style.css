@@ -7,14 +7,39 @@ html{
 
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:blueviolet;
     font-size: medium;
     height: 100vh;
+    color: blueviolet;
+
+    
 }
 
 .top_nav{
-    border-bottom: 5px solid pink;
- 
+    background-color:darkgray;
+    padding: 10px 0 0 0;
+    
+}
+p{ 
+    margin-top: 10px;
+    margin-bottom: 20px;
+   
+   
+}
+
+
+.logo{
+    color:black;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:cursive;
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+    
+    
 }
 
 .nav_check{
@@ -46,25 +71,43 @@ body{
     display:flex;
     flex-direction:column;
     align-items: center;
-    padding: 20px;
+    margin:0;
+    padding: 10px;
     gap: 1rem;
-    
-  
-   
 
 }
 
 
 .menu_nav li{
     list-style: none;
-   display: none;
+    display: none;
+    font-size: 12px;
+    
     
 }
 
 .menu_nav li a{
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: ghostwhite;
     
+}
+
+footer{
+    background-color: darkgray;
+    margin:0;
+    margin-top: 20px;
+    
+}
+
+footer .img.align-left{
+    display: block;
+    margin: 10px;
+    padding-top: 10px 10px 10px 10px;
+}
+
+.menu_nav li a:hover{
+    color: black;
 }
 
 #nav_check:checked~ul.menu_nav li{
@@ -79,7 +122,195 @@ body{
 }
 
 
-@media only screen and (min-width: 560px){
+.banner{
+    width: 100%;
+    display:block;
+    border-bottom: .5rem solid darkgray;
+}
+
+.banner .cooking_img{
+    width: 100%;
+    display:block;
+    border-radius: 20%;
+    height: 200px;
+    margin-right:20px;
+
+}
+
+
+
+.collection .item{
+    display: inline;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    
+}
+
+.social{
+    display:flex;
+    justify-content: space-between;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+   
+}
+.container img{
+    width: 200px;
+    height: 200px;
+    border: 5px solid plum;
+    
+    
+}
+
+.recipes a{
+    text-decoration: none;
+}
+
+.description{
+    
+   
+    flex-wrap: wrap;
+    padding: 10px 50px 10px 5px;
+    font-size: medium;
+    flex-shrink: 20px;
+    
+    
+
+}
+
+h2{
+    margin-top: 30px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    text-decoration: underline;
+
+}
+
+
+.name{
+    color: black;
+    text-decoration: none;
+    
+    margin-bottom: 50px;
+  
+    
+}
+
+
+.recipe_list img{
+    width: 400px;
+    height: 300px;
+    border-radius: 10%;
+    
+}
+
+
+.ingredients h3, .instructions h3{
+    color: darkmagenta;
+    text-align: left;
+}
+ #end{
+     font-size: 30px;
+     text-align: center;
+     color: darkmagenta;
+     margin-top: 20px;
+
+ }
+
+ .instructions h3{
+     margin-top: 30px;
+ }
+
+ .instructions li, .ingredients li{
+     margin-bottom: 5px;
+ }
+
+ 
+
+
+
+
+/*Tablet View*/
+
+@media only screen and (min-width: 750px){
+
+    .top_nav{
+        line-height: 1.5rem;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .top_nav .toggle{
+        display:none;
+    }
+
+    .menu_nav{
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+       
+    }
+    .menu_nav li a{
+
+        font-size: 1.5rem;
+
+    }
+
+   .menu_nav li{
+       display: block;
+
+   }
+
+    .menu_nav .logo a{
+        float: left;
+        padding-left: 0;
+        font-size: 2rem;
+    }
+
+    .banner .cooking_img{
+        height: 250px;
+    }
+
+    .social{
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container{
+        flex-direction: row;
+    }
+    .description{
+        padding: 50px 50px 10px 50px;
+    }
+
+    .recipe_list img{
+        float:right;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+   
+
+}
+/*Desktop View*/
+
+@media only screen and (min-width: 900px){
+
+    .top_nav{
+        line-height: 1.5rem;
+    }
+
+    p{
+        text-align: center;
+    }
 
     .top_nav .toggle{
         display:none;
@@ -87,13 +318,55 @@ body{
 
     .menu_nav{
         flex-direction: row;
+        width: 100%;
         justify-content: space-around;
         flex-wrap: wrap;
+       
 
     }
-   
-    .menu_nav li{
-        display: block;
+    .menu_nav li a{
+
+        
+        font-size: 1.5rem;
+
+    }
+   .menu_nav li{
+       display: block;
+
+   }
+
+    .menu_nav .logo a{
+        float: left;
+        padding-left: 0;
+        font-size: 2rem;
     }
 
+    .banner .cooking_img{
+        height: 250px;
+    }
+
+    .social{
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container{
+        flex-direction: row;
+    }
+
+    .description{
+        padding: 70px 70px 20px 70px;
+    }
+
+   .recipe_list img{
+       float:right;
+       margin-right: 50px;
+   }
+
+   .name{
+       text-align: center;
+   }
+  
+  
 }
+
